@@ -33,4 +33,5 @@ def main():
         else:
             print(f"{login} is missing {args.filename}")
 
-
+if __name__ == "__main__":
+    main()
