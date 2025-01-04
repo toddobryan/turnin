@@ -25,7 +25,7 @@ def main():
 
     resources_folder = pathlib.Path(__file__).parent / "resources"
 
-    df = pd.read_csv(resources_folder / args.period, names=["login", "last", "first", "nick"])
+    df = pd.read_csv(resources_folder / f"{args.period}.csv", names=["login", "last", "first", "nick"])
     logins = df["login"].tolist()
     for login in logins:
         print(login)
