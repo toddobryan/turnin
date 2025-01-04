@@ -31,7 +31,7 @@ def main():
         student_folder = pathlib.Path("/") / "home" / login / TURNIN
         student_assignment = student_folder / args.filename
         if student_assignment.exists():
-            shutil.copy2(student_assignment, assignment_folder / f"{login}.{extension}")
+            shutil.copy2(student_assignment, assignment_folder / args.period / f"{login}.{extension}")
         else:
             print(f"{login} is missing {args.filename}")
 
