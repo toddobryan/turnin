@@ -23,7 +23,9 @@ def main():
     # period_folder = assignment_folder / args.period
     # period_folder.mkdir(parents=True, exist_ok=True)
 
-    df = pd.read_csv(f"resources/{args.period}", names=["login", "last", "first", "nick"])
+    resources_folder = pathlib.Path(__file__).parent / "resources"
+
+    df = pd.read_csv(resources_folder / args.period, names=["login", "last", "first", "nick"])
     logins = df["login"].tolist()
     for login in logins:
         print(login)
