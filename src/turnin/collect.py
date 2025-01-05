@@ -13,6 +13,7 @@ def arg_parser():
     return parser
 
 def collect(period: str, filename: str, missing: dict[str, list[str]]) -> dict[str, list[str]]:
+    print(f"Collecting {filename} from {period}")
     assignment_name = pathlib.Path(filename).stem
     extension = pathlib.Path(filename).suffix
     ASSIGNMENTS_FOLDER.mkdir(exist_ok=True)
@@ -48,6 +49,6 @@ if __name__ == "__main__":
             "conditional-functions.rkt",
             "road-trip.rkt",
         ]:
-            collect(period, assignment, missing)
+            missing = collect(period, assignment, missing)
     for login, assignments in missing.items():
         print(f"{login}: {", ".join(assignments)}")
