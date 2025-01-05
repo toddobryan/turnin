@@ -29,7 +29,7 @@ def collect(period: str, filename: str, missing: dict[str, list[str]]) -> dict[s
         student_folder = pathlib.Path("/") / "home" / login / TURNIN
         student_assignment = student_folder / filename
         if student_assignment.exists():
-            shutil.copy2(student_assignment, assignment_folder / period / f"{login}.{extension}")
+            shutil.copy2(student_assignment, assignment_folder / period / f"{login}{extension}")
         else:
             if login not in missing:
                 missing[login] = []
@@ -52,3 +52,4 @@ if __name__ == "__main__":
             missing = collect(period, assignment, missing)
     for login, assignments in missing.items():
         print(f"{login}: {", ".join(assignments)}")
+    print("\n  Don't forget to chown assignments.")
