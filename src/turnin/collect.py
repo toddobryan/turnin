@@ -12,28 +12,42 @@ def arg_parser():
     parser.add_argument("filename", help="file to collect")
     return parser
 
-def main():
-    parser = arg_parser()
-    args = parser.parse_args()
-
-    assignment_name = pathlib.Path(args.filename).stem
-    extension = pathlib.Path(args.filename).suffix
+def collect(period: str, filename: str, missing: dict[str, list[str]]) -> dict[str, list[str]]:
+    assignment_name = pathlib.Path(filename).stem
+    extension = pathlib.Path(filename).suffix
     ASSIGNMENTS_FOLDER.mkdir(exist_ok=True)
     assignment_folder = ASSIGNMENTS_FOLDER / assignment_name
-    period_folder = assignment_folder / args.period
+    period_folder = assignment_folder / period
     period_folder.mkdir(parents=True, exist_ok=True)
 
     resources_folder = pathlib.Path(__file__).parent / "resources"
 
-    df = pd.read_csv(resources_folder / f"{args.period}.csv", names=["login", "last", "first", "nick"])
+    df = pd.read_csv(resources_folder / f"{period}.csv", names=["login", "last", "first", "nick"])
     logins = df["login"].tolist()
     for login in logins:
         student_folder = pathlib.Path("/") / "home" / login / TURNIN
-        student_assignment = student_folder / args.filename
+        student_assignment = student_folder / filename
         if student_assignment.exists():
-            shutil.copy2(student_assignment, assignment_folder / args.period / f"{login}.{extension}")
+            shutil.copy2(student_assignment, assignment_folder / period / f"{login}.{extension}")
         else:
-            print(f"{login} is missing {args.filename}")
+            if login not in missing:
+                missing[login] = []
+            missing[login].append(assignment_name)
+    return missing
 
 if __name__ == "__main__":
-    main()
+    missing = {}
+    for period in ["r2", "r3", "r4", "w1", "w3"]:
+        for assignment in [
+            "image-exercises.rkt",
+            "writing-functions.rkt",
+            "project1.rkt",
+            "more-design.rkt",
+            "boolean-functions.rkt",
+            "more-math.rkt",
+            "conditional-functions.rkt",
+            "road-trip.rkt",
+        ]:
+            collect(period, assignment, missing)
+    for login, assignments in missing.items():
+        print(f"{login}: {", ".join(assignments)}")
