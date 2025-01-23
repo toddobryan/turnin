@@ -6,7 +6,7 @@ from pathlib import Path
 import pathlib
 import shutil
 
-from . import TURNIN, date_tag, datetime_tag
+from . import TURNIN, date_tag, datetime_tag, get_current_user
 
 collect_parser = ArgumentParser(prog="collect", description="collect student work")
 collect_parser.add_argument("period")
@@ -25,7 +25,7 @@ def collect(
     if not missing:
         missing = {}
     if not assignments_folder:
-        assignments_folder = Path.home() / f"assignments-{date_tag()}"
+        assignments_folder = Path("/home") / get_current_user() / f"assignments-{date_tag()}"
     print(f"Collecting {filename} from {period}")
     print(f"assignments folder: {assignments_folder}")
     assignment_name = pathlib.Path(filename).stem
