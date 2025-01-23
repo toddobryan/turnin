@@ -26,6 +26,7 @@ def collect(
     if not assignments_folder:
         assignments_folder = Path.home() / f"assignments-{datetime_tag()}"
     print(f"Collecting {filename} from {period}")
+    print(f"assignments folder: {assignments_folder}")
     assignment_name = pathlib.Path(filename).stem
     extension = pathlib.Path(filename).suffix
     assignments_folder.mkdir(exist_ok=True)
