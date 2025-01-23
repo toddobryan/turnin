@@ -5,9 +5,9 @@ from pathlib import Path
 import pathlib
 import shutil
 
-from . import turnin_parser, TURNIN, ASSIGNMENTS_FOLDER, datetime_tag
+from . import TURNIN, datetime_tag
 
-collect_parser = ArgumentParser(prog="collect", description="collect student work", parents=[turnin_parser])
+collect_parser = ArgumentParser(prog="collect", description="collect student work")
 collect_parser.add_argument("period")
 collect_parser.add_argument("filename")
 
