@@ -52,13 +52,20 @@ def collect(
             student_assignment_collected = collected_folder / f"{assignment_name}-{datetime_tag()}{extension}"
             shutil.copy2(student_assignment, assignment_folder / period / f"{login}{extension}")
             shutil.move(student_assignment, student_assignment_collected)
-        elif not glob.glob(os.path.join(collected_folder, f"{assignment_name}*")):
-            if login not in missing:
-                missing[login] = []
-            missing[login].append(assignment_name)
-            missing_file = turnin_folder(login) / f"missing-{filename}"
-            missing_file.touch()
-            shutil.chown(missing_file, user=login, group=login)
+        else:
+            previous_files = glob.glob(os.path.join(collected_folder, f"{assignment_name}*"))
+            if previous_files:
+                for file in previous_files:
+                    name_with_date = Path(file).name
+                    login_with_date = name_with_date.replace(assignment_name, login)
+                    shutil.move(file, assignment_folder / period / login_with_date)
+            else:
+                if login not in missing:
+                    missing[login] = []
+                missing[login].append(assignment_name)
+                missing_file = turnin_folder(login) / f"missing-{filename}"
+                missing_file.touch()
+                shutil.chown(missing_file, user=login, group=login)
         shutil.chown(collected_folder, user="root", group="root")
         os.chmod(collected_folder, 0o555)
 
