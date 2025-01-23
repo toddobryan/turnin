@@ -1,23 +1,35 @@
+import os
 from argparse import ArgumentParser
 import pandas as pd
+from pathlib import Path
 import pathlib
 import shutil
 
-ASSIGNMENTS_FOLDER = pathlib.Path("/") / "home" / "toddobryan" / "assignments"
-TURNIN = "turnin"
+from . import turnin_parser, TURNIN, ASSIGNMENTS_FOLDER, datetime_tag
 
-def arg_parser():
-    parser = ArgumentParser(prog="collect", description="grab all files from student turnin folders")
-    parser.add_argument("period", help="which class to collect")
-    parser.add_argument("filename", help="file to collect")
-    return parser
+collect_parser = ArgumentParser(prog="collect", description="collect student work", parents=[turnin_parser])
+collect_parser.add_argument("period")
+collect_parser.add_argument("filename")
 
-def collect(period: str, filename: str, missing: dict[str, list[str]]) -> dict[str, list[str]]:
+
+def turnin_folder(login: str) -> Path:
+    return Path("/home") / login / TURNIN
+
+def collect(
+        period: str,
+        filename: str,
+        missing: dict[str, list[str]] = None,
+        assignments_folder: str = None,
+) -> dict[str, list[str]]:
+    if not missing:
+        missing = {}
+    if not assignments_folder:
+        assignments_folder = Path.home() / f"assignments-{datetime_tag()}"
     print(f"Collecting {filename} from {period}")
     assignment_name = pathlib.Path(filename).stem
     extension = pathlib.Path(filename).suffix
-    ASSIGNMENTS_FOLDER.mkdir(exist_ok=True)
-    assignment_folder = ASSIGNMENTS_FOLDER / assignment_name
+    assignments_folder.mkdir(exist_ok=True)
+    assignment_folder = assignments_folder / assignment_name
     period_folder = assignment_folder / period
     period_folder.mkdir(parents=True, exist_ok=True)
 
@@ -26,30 +38,30 @@ def collect(period: str, filename: str, missing: dict[str, list[str]]) -> dict[s
     df = pd.read_csv(resources_folder / f"{period}.csv", names=["login", "last", "first", "nick"])
     logins = df["login"].tolist()
     for login in logins:
-        student_folder = pathlib.Path("/") / "home" / login / TURNIN
-        student_assignment = student_folder / filename
+        home_folder = pathlib.Path("/") / "home" / login
+        if not home_folder.exists():
+            print(f"{login} has no home folder")
+            continue
+
+        collected_folder = turnin_folder(login) / "collected"
+        collected_folder.mkdir(exist_ok=True)
+        student_assignment = turnin_folder(login) / filename
         if student_assignment.exists():
+            student_assignment_collected = collected_folder / f"{assignment_name}-{datetime_tag()}{extension}"
             shutil.copy2(student_assignment, assignment_folder / period / f"{login}{extension}")
+            shutil.move(student_assignment, student_assignment_collected)
         else:
             if login not in missing:
                 missing[login] = []
             missing[login].append(assignment_name)
+            missing_file = turnin_folder(login) / f"missing-{filename}"
+            missing_file.touch()
+            shutil.chown(missing_file, user=login, group=login)
+        shutil.chown(collected_folder, user="root", group="root")
+        os.chmod(collected_folder, 0o555)
+
     return missing
 
 if __name__ == "__main__":
-    missing = {}
-    for period in ["r2", "r3", "r4", "w1", "w3"]:
-        for assignment in [
-            "image-exercises.rkt",
-            "writing-functions.rkt",
-            "project1.rkt",
-            "more-design.rkt",
-            "boolean-functions.rkt",
-            "more-math.rkt",
-            "conditional-functions.rkt",
-            "road-trip.rkt",
-        ]:
-            missing = collect(period, assignment, missing)
-    for login, assignments in missing.items():
-        print(f"{login}: {", ".join(assignments)}")
-    print("\n  Don't forget to chown assignments.")
+    args = collect_parser.parse_args()
+    collect(args.period, args.filename)

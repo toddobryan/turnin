@@ -7,6 +7,9 @@ name = "pypi"
 lxml = "*"
 numpy = "*"
 pandas = "*"
+commonmark = "*"
+pytest = "*"
+pytest-srcpaths = "*"
 
 [dev-packages]
 
