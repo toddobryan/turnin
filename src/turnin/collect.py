@@ -1,5 +1,6 @@
 import glob
 import os
+import sys
 from argparse import ArgumentParser
 import pandas as pd
 from pathlib import Path
@@ -72,9 +73,13 @@ def collect(
     return missing
 
 if __name__ == "__main__":
-    missing = {}
-    for period in ALL_PERIODS:
-        for assignment in ALL_ASSIGNMENTS:
-            missing = collect(period, assignment, missing=missing)
-    for login, assignments in missing.items():
-        print(f"{login}: {', '.join(assignments)}")
+    if len(sys.argv) == 2:
+        args = collect_parser.parse_args()
+        collect(args.period, args.filename)
+    else:
+        missing = {}
+        for period in ALL_PERIODS:
+            for assignment in ALL_ASSIGNMENTS:
+                missing = collect(period, assignment, missing=missing)
+        for login, assignments in missing.items():
+            print(f"{login}: {', '.join(assignments)}")

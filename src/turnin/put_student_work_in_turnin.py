@@ -28,7 +28,7 @@ def put_student_work_in_turnin():
             for assignment in student_folder.iterdir():
                 if assignment.is_file():
                     student_file = student_turnin_folder / assignment.name
-                    print(f"Copying {student_folder.basename}/{assignment.name}} to turnin")
+                    print(f"Copying {student_folder.basename}/{assignment.name} to turnin")
                     if student_file.exists():
                         stat = student_file.stat()
                         student_file_without_extension = student_file.basename.with_suffix("")
