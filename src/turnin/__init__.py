@@ -1,6 +1,18 @@
+import os
 from argparse import ArgumentParser
 from datetime import datetime
+from getpass import getpass
 from pathlib import Path
+
+def get_current_user():
+    if os.geteuid() == 0:
+        sudo_user = os.environ.get("SUDO_USER")
+        if sudo_user:
+            return sudo_user
+        else:
+            return getpass.getuser()
+    else:
+        return getpass.getuser()
 
 #from .collect import collect
 
@@ -31,6 +43,10 @@ ALL_ASSIGNMENTS = [
     "road-trip.rkt",
 ]
 ALL_PERIODS = ["r2", "r3", "r4", "w1", "w3"]
+
+def date_tag() -> str:
+    """Returns current date in the form YYYY-MM-DD"""
+    return datetime.now().strftime("%Y-%m-%d")
 
 def datetime_tag() -> str:
     """Returns current datetime in the form YYYY-MM-DD-HH-MM"""
