@@ -73,7 +73,7 @@ def collect(
     return missing
 
 if __name__ == "__main__":
-    if len(sys.argv) == 2:
+    if len(sys.argv) == 3:
         args = collect_parser.parse_args()
         collect(args.period, args.filename)
     else:
