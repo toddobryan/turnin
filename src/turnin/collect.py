@@ -73,13 +73,14 @@ def collect(
     return missing
 
 if __name__ == "__main__":
+    missing = {}
     if len(sys.argv) == 3:
         args = collect_parser.parse_args()
-        collect(args.period, args.filename)
+        missing = collect(args.period, args.filename)
     else:
-        missing = {}
         for period in ALL_PERIODS:
             for assignment in ALL_ASSIGNMENTS:
                 missing = collect(period, assignment, missing=missing)
-        for login, assignments in missing.items():
-            print(f"{login}: {', '.join(assignments)}")
+
+    for login, assignments in missing.items():
+        print(f"{login}: {', '.join(assignments)}")
