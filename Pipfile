@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 pandas = "*"
 lxml = "*"
+commonmark = "*"
+pytest = "*"
+pytest-srcpaths = "*"
 
 [dev-packages]
 

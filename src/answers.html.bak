@@ -1,0 +1,735 @@
+<ol type="1">
+<li><p>(Bin-1, v1=33, v2=18) How many different values can be
+represented by 5 bits? Correct: v1=C; v2=D</p>
+<ul>
+<li>(v1=B, v2=E). 5</li>
+<li>(v1=E, v2=B). 10</li>
+<li>(v1=A, v2=C). 25</li>
+<li>(v1=C, v2=D). 32</li>
+<li>(v1=D, v2=A). 255</li>
+</ul></li>
+<li><p>(Bin-2, v1=34, v2=12) How do you write 17 as an 8-bit unsigned
+number? Correct: v1=E; v2=B</p>
+<ul>
+<li>(v1=D, v2=A). 10001000</li>
+<li>(v1=E, v2=B). 00010001</li>
+<li>(v1=A, v2=E). 11101111</li>
+<li>(v1=B, v2=C). 10010001</li>
+<li>(v1=C, v2=D). 11001100</li>
+</ul></li>
+<li><p>(Bin-3, v1=11, v2=27) In order, how many bits do you need to
+represent: 0-255 unsigned, -32 to 31 signed, and -8 to 7 signed?
+Correct: v1=B; v2=D</p>
+<ul>
+<li>(v1=B, v2=D). 8, 6, 4</li>
+<li>(v1=D, v2=C). 16, 5, 3</li>
+<li>(v1=A, v2=B). 8, 5, 4</li>
+<li>(v1=C, v2=E). 16, 8, 4</li>
+<li>(v1=E, v2=A). 8, 5, 3</li>
+</ul></li>
+<li><p>(Bin-4, v1=5, v2=14) What do the <em>signed</em> 8-bit binary
+numbers <code>10011000</code> and <code>01001000</code> represent in
+decimal? Correct: v1=E; v2=C</p>
+<ul>
+<li>(v1=E, v2=C). -104 and 72</li>
+<li>(v1=A, v2=B). 25 and 18</li>
+<li>(v1=C, v2=A). -103 and 72</li>
+<li>(v1=D, v2=D). -104 and 18</li>
+<li>(v1=A, v2=E). -18 and 103</li>
+</ul></li>
+<li><p>(Bin-5, v1=16, v2=5) How many bytes does the hexadecimal number
+<code>A0F2</code> represent? Correct: v1=E; v2=C</p>
+<ul>
+<li>(v1=A, v2=D). 1</li>
+<li>(v1=E, v2=C). 2</li>
+<li>(v1=B, v2=B). 3</li>
+<li>(v1=C, v2=E). 4</li>
+<li>(v1=D, v2=A). 5</li>
+</ul></li>
+<li><p>(Bin-6, v1=40, v2=21) Which of the following is the hexadecimal
+representation of the binary number <code>10011100</code>? Correct:
+v1=D; v2=C</p>
+<ul>
+<li>(v1=D, v2=C). <code>9C</code></li>
+<li>(v1=A, v2=A). <code>9B</code></li>
+<li>(v1=B, v2=B). <code>39</code></li>
+<li>(v1=E, v2=E). <code>156</code></li>
+<li>(v1=C, v2=D). <code>-100</code></li>
+</ul></li>
+<li><p>(Bin-7, v1=22, v2=38) How do you write <code>-3</code> as a 4-bit
+signed number? Correct: v1=B; v2=C</p>
+<ul>
+<li>(v1=D, v2=B). <code>1111</code></li>
+<li>(v1=B, v2=C). <code>1101</code></li>
+<li>(v1=C, v2=A). <code>1011</code></li>
+<li>(v1=A, v2=D). <code>1100</code></li>
+<li>(v1=E, v2=E). <code>1001</code></li>
+</ul></li>
+<li><p>(Bin-8, v1=27, v2=10) Which of the following decimal numbers
+<em>can not</em> be exactly represented as a binary floating point
+number? Correct: v1=B; v2=D</p>
+<ul>
+<li>(v1=E, v2=E). <code>0.25</code></li>
+<li>(v1=A, v2=A). <code>1.5</code></li>
+<li>(v1=C, v2=B). <code>0.125</code></li>
+<li>(v1=D, v2=C). <code>21.0</code></li>
+<li>(v1=B, v2=D). <code>3.3</code></li>
+</ul></li>
+<li><p>(Data-1, v1=24, v2=13) Which of the following will <em>not</em>
+result in an <em>overflow error</em>? Correct: v1=E; v2=C</p>
+<ul>
+<li>(v1=C, v2=D). Adding <code>200</code> and <code>100</code> using
+8-bit unsigned binary</li>
+<li>(v1=D, v2=A). Adding <code>-5</code> and <code>-4</code> using 4-bit
+signed binary</li>
+<li>(v1=E, v2=C). Subtracting <code>-3</code> from <code>-6</code> using
+4-bit signed binary</li>
+<li>(v1=A, v2=E). Adding <code>5</code> and <code>11</code> using 4-bit
+unsigned binary</li>
+<li>(v1=B, v2=B). Subtracting <code>3</code> from <code>-6</code> using
+4-bit signed binary</li>
+</ul></li>
+<li><p>(Data-2, v1=4, v2=31) Which of the following is probably
+<em>not</em> the result of <em>round-off error</em>? Correct: v1=A;
+v2=C</p>
+<ul>
+<li>(v1=B, v2=E). Finding the area of a circle results in a slightly
+different answer on your and your friend’s computer</li>
+<li>(v1=C, v2=D). Dividing 1 by 3 results in <code>0.33333333331</code>
+on a calculator</li>
+<li>(v1=A, v2=C). Multiplying two very large integers results in an
+error</li>
+<li>(v1=D, v2=B). Squaring a calculator’s value for [pi] has wrong
+digits near the end</li>
+<li>(v1=E, v2=A). Multiplying <code>0.1</code> by <code>10</code>
+results in <code>0.9999999999999999</code></li>
+</ul></li>
+<li><p>(Data-3, v1=28, v2=19) An elevator in a ten-story building is run
+by a computer program. Which of the following pieces of information
+could the program represent as a single bit? (There is more than one
+answer to this question.) Correct: v1=AD=1.0, A=0.5, D=0.5; v2=EA=1.0,
+E=0.5, A=0.5</p>
+<ul>
+<li>(v1=A, v2=E). Whether the <em>Door Closed</em> button has been
+pressed</li>
+<li>(v1=C, v2=B). Which floor is selected</li>
+<li>(v1=B, v2=D). Which floors the <em>UP</em> button has been pressed
+on</li>
+<li>(v1=D, v2=A). Whether the <em>Emergency Call</em> button has been
+pressed</li>
+<li>(v1=E, v2=C). Which floor the elevator is on</li>
+</ul></li>
+<li><p>(Data-4, v1=38, v2=2) In ASCII, one byte of information
+represents one letter. Which of the following represents
+<code>MANUAL</code> in ASCII? Correct: v1=D; v2=E</p>
+<ul>
+<li>(v1=D, v2=E).
+<code>01001101 01000001 01001110 01010101 01000001 01001100</code></li>
+<li>(v1=C, v2=C).
+<code>01000001 01001101 01001110 01010101 01000001 01001100</code></li>
+<li>(v1=E, v2=D).
+<code>01001100 01001101 01000001 01001110 01010101 01000001</code></li>
+<li>(v1=B, v2=B).
+<code>01001101 01000001 01000001 01010101 01001110 01001100</code></li>
+<li>(v1=A, v2=A).
+<code>01000001 01001110 01010101 01000001 01001100 01001101</code></li>
+</ul></li>
+<li><p>(Data-5, v1=3, v2=25) In designing a program to analyze traffic
+data, a programmer needs to determine which data is analog so that she
+can decide how to convert it to digital data. Which of these is analog
+data? Correct: v1=D; v2=C</p>
+<ul>
+<li>(v1=D, v2=C). Each car’s location</li>
+<li>(v1=E, v2=A). Each car’s license plate number</li>
+<li>(v1=B, v2=B). Each car’s speed to the nearest mile per hour, read by
+a tower-mounted radar gun</li>
+<li>(v1=A, v2=E). The number of occupants of each car</li>
+<li>(v1=C, v2=D). Each car’s make, model, and year</li>
+</ul></li>
+<li><p>(Data-6, v1=32, v2=35) Which of the following is true about the
+process of converting analog data into digital data? Correct: v1=E;
+v2=C</p>
+<ul>
+<li>(v1=A, v2=B). The digital version contains all of the details of the
+analog data, as long as enough storage capacity is available.</li>
+<li>(v1=C, v2=D). To make the digital version be a more accurate
+representation of the analog data, the process should use fewer bits to
+represent each sample.</li>
+<li>(v1=D, v2=E). A longer interval between measured samples means more
+details will be captured in the conversion from analog to digital.</li>
+<li>(v1=E, v2=C). The digital version is a representation of the analog
+data but cannot include all of the details.</li>
+<li>(v1=B, v2=A). It is possible to recover the analog data from the
+digital data.</li>
+</ul></li>
+<li><p>(Data-7, v1=20, v2=20) Which of the following kinds of data must
+be compressed with a lossless compression algorithm to ensure that it’s
+useful? Correct: v1=D; v2=B</p>
+<ul>
+<li>(v1=A, v2=C). Pictures from a camera phone</li>
+<li>(v1=C, v2=D). Audio from a concert</li>
+<li>(v1=D, v2=B). Text from a computer program</li>
+<li>(v1=B, v2=E). Video from a streaming service</li>
+<li>(v1=E, v2=A). Pictures served across the web</li>
+</ul></li>
+<li><p>(Data-8, v1=39, v2=3) You want to create a website with photos
+and are trying to decide whether to use lossy compression. Which of
+these is true? Correct: v1=D; v2=E</p>
+<ul>
+<li>(v1=E, v2=A). Lossy compression algorithms reduce the file size, but
+they can only reduce up to 10% of the file size.</li>
+<li>(v1=D, v2=E). Lossy compression algorithms reduce the file size, but
+the compression is irreversible, so you need to store the original
+images if you ever want to display the photos at a higher quality.</li>
+<li>(v1=B, v2=B). Lossy compression algorithms reduce the file size, but
+your users will be unhappy because the images will clearly be lower
+quality.</li>
+<li>(v1=A, v2=C). Lossy compression algorithms don’t reduce the file
+size, but they do appear to download faster because of some neat
+tricks.</li>
+<li>(v1=C, v2=D). Using lossy compression ensures that users can see the
+original quality of the photos you post.</li>
+</ul></li>
+<li><p>(Data-9, v1=8, v2=7) Which of the following is true of lossy
+compression? Correct: v1=A; v2=A</p>
+<ul>
+<li>(v1=B, v2=D). You can reverse it to produce the original data?</li>
+<li>(v1=A, v2=A). You can compress the size as much as you want, as long
+as you are willing to give up more and more detail.</li>
+<li>(v1=D, v2=E). It’s very useful for important data, like the text of
+books or medical records.</li>
+<li>(v1=E, v2=C). It generally takes up more space than lossless
+compression.</li>
+<li>(v1=C, v2=B). Almost no one uses it.</li>
+</ul></li>
+<li><p>(Data-10, v1=35, v2=26) Which of the following is a true
+statement about copyright and intellectual property? Correct: v1=D;
+v2=D</p>
+<ul>
+<li>(v1=A, v2=E). When you create something, unless you register it with
+the copyright office, it is in the public domain.</li>
+<li>(v1=E, v2=C). The Creative Commons license ensures that other people
+can not use the licenser’s content in their own works.</li>
+<li>(v1=D, v2=D). It is possible to provide a license that allows people
+to use content for non-commercial (not money-making) use, but restricts
+them from using it commercially (to make money).</li>
+<li>(v1=B, v2=A). Copyright is permanent. Once an item is copyrighted,
+it stays copyrighted forever.</li>
+<li>(v1=C, v2=B). All the content on YouTube is in the public
+domain.</li>
+</ul></li>
+<li><p>(Data-11, v1=12, v2=41) A mood-tracking app lets users enter data
+about how they’re feeling. For each user report, it includes: user id,
+timestamp, a rating from 1-10 of their mood, and comments. Which of the
+following can not be determined from the data? Correct: v1=D; v2=E</p>
+<ul>
+<li>(v1=A, v2=C). Which user posts the most reports</li>
+<li>(v1=C, v2=A). Which time of day people tend to be in the best
+mood</li>
+<li>(v1=E, v2=D). The average mood for each user based on their
+reports</li>
+<li>(v1=B, v2=B). Which user writes the most comments</li>
+<li>(v1=D, v2=E). The times at which people in a certain country feel
+the best</li>
+</ul></li>
+<li><p>(Data-12, v1=6, v2=33) A “red light camera” is a camera installed
+at street intersections that records whenever a car runs a red light.
+The camera records two images, one right before the car enters the
+intersection, and one after it’s entered the intersection. In addition
+to the images, it records metadata about the incident: the date and
+time, the intersection location, the speed of the car, and the seconds
+elapsed past the light turning red. Which of these questions can be
+better answered by analyzing the metadata instead of the image data?
+(This question has multiple correct answers.) Correct: v1=CA=1.0, C=0.5,
+A=0.5; v2=AE=1.0, A=0.5, E=0.5</p>
+<ul>
+<li>(v1=D, v2=B). What car models are most associated with running red
+lights?</li>
+<li>(v1=C, v2=A). Which intersections have the greatest number of red
+light runners?</li>
+<li>(v1=B, v2=D). What is the frequency of pedestrians in or near the
+intersection during an incident?</li>
+<li>(v1=A, v2=E). What is the average speed of a car when it runs a red
+light?</li>
+<li>(v1=E, v2=C). Are males or females more likely to run red
+lights?</li>
+</ul></li>
+<li><p>(Boolean-1, v1=30, v2=30) For which values of <code>p</code> and
+<code>q</code> is <code>(and p q)</code> <code>#true</code>? Correct:
+v1=B; v2=A</p>
+<ul>
+<li>(v1=B, v2=A). <code>#true</code> and <code>#true</code></li>
+<li>(v1=A, v2=D). <code>#true</code> and <code>#false</code></li>
+<li>(v1=C, v2=B). <code>#false</code> and <code>#true</code></li>
+<li>(v1=D, v2=C). <code>#false</code> and <code>#false</code></li>
+</ul></li>
+<li><p>(Boolean-2, v1=29, v2=36) For which values of <code>p</code> and
+<code>q</code> is <code>(or p q)</code> <code>#false</code>? Correct:
+v1=D; v2=A</p>
+<ul>
+<li>(v1=B, v2=C). <code>#true</code> and <code>#true</code></li>
+<li>(v1=A, v2=D). <code>#true</code> and <code>#false</code></li>
+<li>(v1=C, v2=B). <code>#false</code> and <code>#true</code></li>
+<li>(v1=D, v2=A). <code>#false</code> and <code>#false</code></li>
+</ul></li>
+<li><p>(Boolean-3, v1=14, v2=32) For which value of <code>x</code> and
+<code>y</code> is <code>(&lt;= x y)</code> <code>#true</code>? This
+question may have multiple answers. Correct: v1=CD=1.0, C=0.5, D=0.5;
+v2=DB=1.0, D=0.5, B=0.5</p>
+<ul>
+<li>(v1=C, v2=D). 3, 4</li>
+<li>(v1=D, v2=B). 2, 2</li>
+<li>(v1=A, v2=A). 10, 5</li>
+<li>(v1=B, v2=C). -1, -5</li>
+</ul></li>
+<li><p>(Boolean-4, v1=1, v2=15) For which values of <code>name</code>
+would the expression <code>(string&lt;=? "Todd" name)</code> be true?
+This question may have multiple answers. Correct: v1=CE=1.0, C=0.5,
+E=0.5; v2=ED=1.0, E=0.5, D=0.5</p>
+<ul>
+<li>(v1=C, v2=E). <code>"Todd"</code></li>
+<li>(v1=E, v2=D). <code>"Vedant"</code></li>
+<li>(v1=A, v2=B). <code>"Anirudh"</code></li>
+<li>(v1=D, v2=A). <code>"Steve"</code></li>
+<li>(v1=B, v2=C). <code>"Eduardo"</code></li>
+</ul></li>
+<li><p>(Cond-1, v1=41, v2=17) What is the value of the following
+expression if <code>age</code> is <code>10</code>, <code>44</code>, and
+<code>100</code>?</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="kw">cond</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">[(&lt;</span> age <span class="dv">44</span><span class="op">)</span> <span class="st">&quot;millennial&quot;</span><span class="op">]</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">[(&lt;</span> age <span class="dv">11</span><span class="op">)</span> <span class="st">&quot;gen-α&quot;</span><span class="op">]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">[(&lt;</span> age <span class="dv">29</span><span class="op">)</span> <span class="st">&quot;gen-z&quot;</span><span class="op">]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">[(&lt;</span> age <span class="dv">78</span><span class="op">)</span> <span class="st">&quot;boomer&quot;</span><span class="op">]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">[(&lt;</span> age <span class="dv">59</span><span class="op">)</span> <span class="st">&quot;gen-x&quot;</span><span class="op">]</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">[</span><span class="kw">else</span> <span class="st">&quot;silent&quot;</span><span class="op">])</span></span></code></pre></div>
+<p>Correct: v1=E; v2=B</p>
+<ul>
+<li>(v1=C, v2=D). <code>"gen-α"</code>, <code>"gen-x"</code>,
+<code>"silent"</code></li>
+<li>(v1=E, v2=B). <code>"millennial"</code>, <code>"boomer"</code>,
+<code>"silent"</code></li>
+<li>(v1=A, v2=E). <code>"gen-α"</code>, <code>"gen-z"</code>,
+<code>"boomer"</code></li>
+<li>(v1=D, v2=A). <code>"silent"</code>, <code>"millennial"</code>,
+<code>"boomer"</code></li>
+<li>(v1=B, v2=C). <code>"gen-α"</code>, <code>"boomer"</code>,
+<code>"silent"</code></li>
+</ul></li>
+<li><p>(Cond-2, v1=18, v2=9) What order should the question-answer pairs
+appear in for this <code>cond</code> expression to provide the correct
+generation for a given person’s age?</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="kw">cond</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">[(&lt;</span> age <span class="dv">44</span><span class="op">)</span> <span class="st">&quot;millennial&quot;</span><span class="op">]</span> <span class="dv">1</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">[(&lt;</span> age <span class="dv">11</span><span class="op">)</span> <span class="st">&quot;gen-α&quot;</span><span class="op">]</span>      <span class="dv">2</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">[(&lt;</span> age <span class="dv">29</span><span class="op">)</span> <span class="st">&quot;gen-z&quot;</span><span class="op">]</span>      <span class="dv">3</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">[(&lt;</span> age <span class="dv">78</span><span class="op">)</span> <span class="st">&quot;boomer&quot;</span><span class="op">]</span>     <span class="dv">4</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">[(&lt;</span> age <span class="dv">59</span><span class="op">)</span> <span class="st">&quot;gen-x&quot;</span><span class="op">]</span>      <span class="dv">5</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">[</span><span class="kw">else</span> <span class="st">&quot;silent&quot;</span><span class="op">])</span>          <span class="dv">6</span></span></code></pre></div>
+<p>Correct: v1=C; v2=A</p>
+<ul>
+<li>(v1=D, v2=C). 1, 2, 3, 4, 5, 6 (as written)</li>
+<li>(v1=B, v2=B). 6, 5, 4, 3, 2, 1</li>
+<li>(v1=C, v2=A). 2, 3, 1, 5, 4, 6</li>
+<li>(v1=A, v2=E). 6, 4, 5, 1, 3, 2</li>
+<li>(v1=E, v2=D). 1, 3, 5, 2, 4, 6</li>
+</ul></li>
+<li><p>(Def-1, v1=19, v2=24) Which of the following is the correct way
+to translate f(x) = x<sup>2</sup> - 4 into Racket? Correct: v1=B;
+v2=C</p>
+<ul>
+<li>(v1=B, v2=C).<br />
+</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>f x<span class="op">)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">(-</span> <span class="op">(</span><span class="kw">expt</span> x <span class="dv">2</span><span class="op">)</span> <span class="dv">4</span><span class="op">))</span></span></code></pre></div>
+<ul>
+<li>(v1=E, v2=B).<br />
+</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> f</span><span class="op">(</span>x<span class="op">)</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">(-</span> <span class="op">(</span><span class="kw">expt</span> x <span class="dv">2</span><span class="op">)</span> <span class="dv">4</span><span class="op">))</span></span></code></pre></div>
+<ul>
+<li>(v1=D, v2=A).<br />
+</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>f x<span class="op">)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">(-</span> <span class="op">(</span><span class="kw">expt</span> <span class="dv">2</span> x<span class="op">)</span> <span class="dv">4</span><span class="op">))</span></span></code></pre></div>
+<ul>
+<li>(v1=A, v2=E).<br />
+</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>f x<span class="op">)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">(-</span> <span class="dv">4</span> <span class="op">(</span><span class="kw">expt</span> <span class="dv">2</span> x<span class="op">)))</span></span></code></pre></div>
+<ul>
+<li>(v1=C, v2=D).<br />
+</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">(</span><span class="ex">define</span><span class="fu"> f</span><span class="op">(</span>x<span class="op">)</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  x^2 <span class="op">-</span> <span class="dv">4</span><span class="op">)</span></span></code></pre></div></li>
+<li><p>(Def-2, v1=17, v2=4) Which line(s) contain mistakes, either in
+style or correctness. This question may have multiple answers.</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>. <span class="co">;; min: number number -&gt; number</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>. <span class="co">;; consumes two numbers</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>. <span class="co">;; produces the minimum number</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>. <span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span><span class="kw">min</span> a b<span class="op">)</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>     <span class="op">(</span><span class="kw">cond</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>.     <span class="op">[(&lt;</span> a b<span class="op">)</span> a<span class="op">]</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>       <span class="op">[</span><span class="kw">else</span> b<span class="op">]))</span></span></code></pre></div>
+<p>Correct: v1=CE=1.0, C=0.5, E=0.5; v2=CB=1.0, C=0.5, B=0.5</p>
+<ul>
+<li>(v1=A, v2=D). 1</li>
+<li>(v1=C, v2=C). 2</li>
+<li>(v1=E, v2=B). 3</li>
+<li>(v1=D, v2=A). 4</li>
+<li>(v1=B, v2=E). 5</li>
+</ul></li>
+<li><p>(Def-3, v1=2, v2=37) Which line(s) contain mistakes, either in
+style or correctness. This question may have multiple answers.</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode racket"><code class="sourceCode racket"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>. <span class="op">(</span><span class="ex">define</span><span class="fu"> required-height </span><span class="dv">163</span><span class="op">)</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span>. <span class="co">;; tall?: number -&gt; boolean</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span>. <span class="co">;; consumes: a person&#39;s height in cm</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span>. <span class="co">;; produces: whether they&#39;re tall enough to ride a ride</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>   <span class="op">(</span><span class="ex">define</span><span class="fu"> </span><span class="op">(</span>tall? height<span class="op">)</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span>.   <span class="op">(&gt;=</span> height required-height<span class="op">))</span></span></code></pre></div>
+<p>Correct: v1=B=1.0, E=1.0, BE=1.0; v2=D=1.0, E=1.0, DE=1.0</p>
+<ul>
+<li>(v1=B, v2=D). 1</li>
+<li>(v1=C, v2=C). 2</li>
+<li>(v1=A, v2=B). 3</li>
+<li>(v1=D, v2=A). 4</li>
+<li>(v1=E, v2=E). 5</li>
+</ul></li>
+<li><p>(Types-1, v1=26, v2=23) What is the type of the expression
+<code>-3</code>? (This question has one or two correct answers) Correct:
+v1=E; v2=E</p>
+<ul>
+<li>(v1=E, v2=E). <code>number</code></li>
+<li>(v1=D, v2=A). <code>string</code></li>
+<li>(v1=A, v2=B). <code>image</code></li>
+<li>(v1=C, v2=D). <code>boolean</code></li>
+<li>(v1=B, v2=C). <code>color</code></li>
+</ul></li>
+<li><p>(Types-2, v1=13, v2=34) What is the type of the expression
+<code>"red"</code>? (This question has one or two correct answers)
+Correct: v1=CA=1.0, C=0.5, A=0.5; v2=AE=1.0, A=0.5, E=0.5</p>
+<ul>
+<li>(v1=D, v2=D). <code>number</code></li>
+<li>(v1=C, v2=A). <code>string</code></li>
+<li>(v1=B, v2=C). <code>image</code></li>
+<li>(v1=E, v2=B). <code>boolean</code></li>
+<li>(v1=A, v2=E). <code>color</code></li>
+</ul></li>
+<li><p>(Types-3, v1=36, v2=40) What is the type of the expression
+<code>"true"</code>? (This question has one or two correct answers)
+Correct: v1=D; v2=A</p>
+<ul>
+<li>(v1=B, v2=B). <code>number</code></li>
+<li>(v1=D, v2=A). <code>string</code></li>
+<li>(v1=E, v2=C). <code>image</code></li>
+<li>(v1=A, v2=D). <code>boolean</code></li>
+<li>(v1=C, v2=E). <code>color</code></li>
+</ul></li>
+<li><p>(Types-4, v1=31, v2=39) What is the type of the expression
+<code>(&lt; 3 4)</code>? (This question has one or two correct answers)
+Correct: v1=B; v2=D</p>
+<ul>
+<li>(v1=A, v2=A). <code>number</code></li>
+<li>(v1=E, v2=C). <code>string</code></li>
+<li>(v1=C, v2=B). <code>image</code></li>
+<li>(v1=B, v2=D). <code>boolean</code></li>
+<li>(v1=D, v2=E). <code>color</code></li>
+</ul></li>
+<li><p>(Types-5, v1=23, v2=6) What is the type of the expression
+<code>(circle 15 "solid" "blue")</code>? (This question has one or two
+correct answers) Correct: v1=B; v2=B</p>
+<ul>
+<li>(v1=D, v2=E). <code>number</code></li>
+<li>(v1=A, v2=C). <code>string</code></li>
+<li>(v1=B, v2=B). <code>image</code></li>
+<li>(v1=E, v2=D). <code>boolean</code></li>
+<li>(v1=C, v2=A). <code>color</code></li>
+</ul></li>
+<li><p>(Design-1, v1=10, v2=1) What are the steps of the design recipe
+in the order that you <em>do</em> them?</p>
+<pre><code>1. Header/Skeleton
+2. Test Cases
+3. Contract
+4. Body
+5. Run/Test
+6. Purpose</code></pre>
+<p>Correct: v1=B; v2=E</p>
+<ul>
+<li>(v1=A, v2=A). 1, 2, 3, 4, 5, 6</li>
+<li>(v1=E, v2=C). 2, 3, 4, 5, 6, 1</li>
+<li>(v1=B, v2=E). 3, 1, 6, 2, 4, 5</li>
+<li>(v1=D, v2=D). 3, 6, 1, 4, 2, 5</li>
+<li>(v1=C, v2=B). 3, 4, 1, 2, 5, 6</li>
+</ul></li>
+<li><p>(Design-2, v1=15, v2=29) What are the steps of the design recipe
+in the order that they <em>appear</em> in the editor?</p>
+<pre><code>1. Header/Skeleton
+2. Test Cases
+3. Contract
+4. Body
+5. Run/Test
+6. Purpose</code></pre>
+<p>Correct: v1=B; v2=B</p>
+<ul>
+<li>(v1=C, v2=A). 1, 2, 3, 4, 6</li>
+<li>(v1=B, v2=B). 3, 6, 1, 4, 2</li>
+<li>(v1=D, v2=E). 3, 1, 6, 2, 4</li>
+<li>(v1=A, v2=C). 3, 6, 1, 2, 4</li>
+<li>(v1=E, v2=D). 6, 3, 1, 4, 2</li>
+</ul></li>
+<li><p>(Design-3, v1=21, v2=11) Consider this template of a Racket
+function. Which numbered part represents the function’s name?</p>
+<pre><code>;; __1__: __2__ -&gt; __3__
+;; consumes: __4__
+;; produces: __5__
+(define (__1__ __6__)
+  ___7___)
+
+(check-expect (__1__ __8__) __9__)</code></pre>
+<p>Correct: v1=D; v2=B</p>
+<ul>
+<li>(v1=D, v2=B). 1</li>
+<li>(v1=A, v2=D). 2</li>
+<li>(v1=B, v2=C). 4</li>
+<li>(v1=E, v2=A). 6</li>
+<li>(v1=C, v2=E). 9</li>
+</ul></li>
+<li><p>(Design-4, v1=7, v2=16) Consider this template of a Racket
+function. Which numbered part represents the types of the arguments the
+function consumes?</p>
+<pre><code>;; __1__: __2__ -&gt; __3__
+;; consumes: __4__
+;; produces: __5__
+(define (__1__ __6__)
+___7___)
+
+(check-expect (__1__ __8__) __9__)</code></pre>
+<p>Correct: v1=D; v2=C</p>
+<ul>
+<li>(v1=E, v2=E). 1</li>
+<li>(v1=D, v2=C). 2</li>
+<li>(v1=C, v2=B). 4</li>
+<li>(v1=A, v2=A). 6</li>
+<li>(v1=B, v2=D). 9</li>
+</ul></li>
+<li><p>(Design-5, v1=25, v2=8) Consider this template of a Racket
+function. Which numbered part represents the return type of the
+function?</p>
+<pre><code>;; __1__: __2__ -&gt; __3__
+;; consumes: __4__
+;; produces: __5__
+(define (__1__ __6__)
+  ___7___)
+
+(check-expect (__1__ __8__) __9__)</code></pre>
+<p>Correct: v1=A; v2=C</p>
+<ul>
+<li>(v1=E, v2=B). 1</li>
+<li>(v1=B, v2=E). 2</li>
+<li>(v1=A, v2=C). 3</li>
+<li>(v1=D, v2=A). 6</li>
+<li>(v1=C, v2=D). 7</li>
+</ul></li>
+<li><p>(Design-6, v1=9, v2=28) Consider this template of a Racket
+function. Which numbered part represents the example arguments you call
+the function with to test it?</p>
+<pre><code>;; __1__: __2__ -&gt; __3__
+;; consumes: __4__
+;; produces: __5__
+(define (__1__ __6__)
+  ___7___)
+
+(check-expect (__1__ __8__) __9__)</code></pre>
+<p>Correct: v1=C; v2=B</p>
+<ul>
+<li>(v1=E, v2=C). 5</li>
+<li>(v1=B, v2=A). 6</li>
+<li>(v1=D, v2=E). 7</li>
+<li>(v1=C, v2=B). 8</li>
+<li>(v1=A, v2=D). 9</li>
+</ul></li>
+<li><p>(Racket-1, v1=37, v2=22) Which of the following is the correct
+way to translate <code>2 + 3 · 4 - 5</code> to Racket? Correct: v1=E;
+v2=B</p>
+<ul>
+<li>(v1=A, v2=C). <code>(+ (- 2 (* 3 4)) 5)</code></li>
+<li>(v1=B, v2=D). <code>(+ (- 2 (* 3 4)) 5)</code></li>
+<li>(v1=E, v2=B). <code>(- (+ 2 (* 3 4)) 5)</code></li>
+<li>(v1=C, v2=E). <code>(- (* (+ 2 3) 4) 5)</code></li>
+<li>(v1=D, v2=A). <code>(- (* 2 (+ 3 4)) 5)</code></li>
+</ul></li>
+<li><p>(Image-1, v1=42, v2=42)
+<code>(flip-vertical (beside WITCH WITCH WITCH))</code> Correct: v1=A;
+v2=A</p>
+<ul>
+<li>(v1=A, v2=A).
+<code>(above/align "left" WITCH (beside WITCH WITCH))</code> or
+<code>(flip-vertical (beside WITCH WITCH WITCH))</code></li>
+<li>(v1=B, v2=B). <code>(rotate -45 (beside WITCH WITCH WITCH))</code>
+or <code>(beside (above WITCH WITCH) WITCH)</code></li>
+<li>(v1=C, v2=C).
+<code>(above (rotate -45 WITCH) (rotate -45 WITCH) (rotate -45 WITCH))</code>
+or <code>(beside WITCH WITCH WITCH)</code></li>
+<li>(v1=D, v2=D). <code>(rotate-cw (above WITCH WITCH WITCH))</code> or
+<code>(beside (flip-horizontal WITCH) (flip-horizontal WITCH) (flip-horizontal WITCH))</code></li>
+<li>(v1=E, v2=E).
+<code>(beside (rotate-ccw WITCH) (rotate-ccw WITCH) (rotate-ccw WITCH))</code>
+or <code>(above WITCH (beside WITCH WITCH))</code></li>
+</ul></li>
+<li><p>(Image-2, v1=43, v2=43) <code>(beside WITCH WITCH WITCH)</code>
+Correct: v1=C; v2=C</p>
+<ul>
+<li>(v1=A, v2=A).
+<code>(above/align "left" WITCH (beside WITCH WITCH))</code> or
+<code>(flip-vertical (beside WITCH WITCH WITCH))</code></li>
+<li>(v1=B, v2=B). <code>(rotate -45 (beside WITCH WITCH WITCH))</code>
+or <code>(beside (above WITCH WITCH) WITCH)</code></li>
+<li>(v1=C, v2=C).
+<code>(above (rotate -45 WITCH) (rotate -45 WITCH) (rotate -45 WITCH))</code>
+or <code>(beside WITCH WITCH WITCH)</code></li>
+<li>(v1=D, v2=D). <code>(rotate-cw (above WITCH WITCH WITCH))</code> or
+<code>(beside (flip-horizontal WITCH) (flip-horizontal WITCH) (flip-horizontal WITCH))</code></li>
+<li>(v1=E, v2=E).
+<code>(beside (rotate-ccw WITCH) (rotate-ccw WITCH) (rotate-ccw WITCH))</code>
+or <code>(above WITCH (beside WITCH WITCH))</code></li>
+</ul></li>
+<li><p>(Image-3, v1=44, v2=44)
+<code>(beside (above WITCH WITCH) WITCH)</code> Correct: v1=B; v2=B</p>
+<ul>
+<li>(v1=A, v2=A).
+<code>(above/align "left" WITCH (beside WITCH WITCH))</code> or
+<code>(flip-vertical (beside WITCH WITCH WITCH))</code></li>
+<li>(v1=B, v2=B). <code>(rotate -45 (beside WITCH WITCH WITCH))</code>
+or <code>(beside (above WITCH WITCH) WITCH)</code></li>
+<li>(v1=C, v2=C).
+<code>(above (rotate -45 WITCH) (rotate -45 WITCH) (rotate -45 WITCH))</code>
+or <code>(beside WITCH WITCH WITCH)</code></li>
+<li>(v1=D, v2=D). <code>(rotate-cw (above WITCH WITCH WITCH))</code> or
+<code>(beside (flip-horizontal WITCH) (flip-horizontal WITCH) (flip-horizontal WITCH))</code></li>
+<li>(v1=E, v2=E).
+<code>(beside (rotate-ccw WITCH) (rotate-ccw WITCH) (rotate-ccw WITCH))</code>
+or <code>(above WITCH (beside WITCH WITCH))</code></li>
+</ul></li>
+<li><p>(Image-4, v1=45, v2=45)
+<code>(above (rotate -45 WITCH) (rotate -45 WITCH) (rotate -45 WITCH))</code>
+Correct: v1=C; v2=C</p>
+<ul>
+<li>(v1=A, v2=A).
+<code>(above/align "left" WITCH (beside WITCH WITCH))</code> or
+<code>(flip-vertical (beside WITCH WITCH WITCH))</code></li>
+<li>(v1=B, v2=B). <code>(rotate -45 (beside WITCH WITCH WITCH))</code>
+or <code>(beside (above WITCH WITCH) WITCH)</code></li>
+<li>(v1=C, v2=C).
+<code>(above (rotate -45 WITCH) (rotate -45 WITCH) (rotate -45 WITCH))</code>
+or <code>(beside WITCH WITCH WITCH)</code></li>
+<li>(v1=D, v2=D). <code>(rotate-cw (above WITCH WITCH WITCH))</code> or
+<code>(beside (flip-horizontal WITCH) (flip-horizontal WITCH) (flip-horizontal WITCH))</code></li>
+<li>(v1=E, v2=E).
+<code>(beside (rotate-ccw WITCH) (rotate-ccw WITCH) (rotate-ccw WITCH))</code>
+or <code>(above WITCH (beside WITCH WITCH))</code></li>
+</ul></li>
+<li><p>(Image-5, v1=46, v2=46)
+<code>(above WITCH (beside WITCH WITCH))</code> Correct: v1=E; v2=E</p>
+<ul>
+<li>(v1=A, v2=A).
+<code>(above/align "left" WITCH (beside WITCH WITCH))</code> or
+<code>(flip-vertical (beside WITCH WITCH WITCH))</code></li>
+<li>(v1=B, v2=B). <code>(rotate -45 (beside WITCH WITCH WITCH))</code>
+or <code>(beside (above WITCH WITCH) WITCH)</code></li>
+<li>(v1=C, v2=C).
+<code>(above (rotate -45 WITCH) (rotate -45 WITCH) (rotate -45 WITCH))</code>
+or <code>(beside WITCH WITCH WITCH)</code></li>
+<li>(v1=D, v2=D). <code>(rotate-cw (above WITCH WITCH WITCH))</code> or
+<code>(beside (flip-horizontal WITCH) (flip-horizontal WITCH) (flip-horizontal WITCH))</code></li>
+<li>(v1=E, v2=E).
+<code>(beside (rotate-ccw WITCH) (rotate-ccw WITCH) (rotate-ccw WITCH))</code>
+or <code>(above WITCH (beside WITCH WITCH))</code></li>
+</ul></li>
+<li><p>(Image-6, v1=47, v2=47)
+<code>(rotate -45 (beside WITCH WITCH WITCH))</code> Correct: v1=B;
+v2=B</p>
+<ul>
+<li>(v1=A, v2=A).
+<code>(above/align "left" WITCH (beside WITCH WITCH))</code> or
+<code>(flip-vertical (beside WITCH WITCH WITCH))</code></li>
+<li>(v1=B, v2=B). <code>(rotate -45 (beside WITCH WITCH WITCH))</code>
+or <code>(beside (above WITCH WITCH) WITCH)</code></li>
+<li>(v1=C, v2=C).
+<code>(above (rotate -45 WITCH) (rotate -45 WITCH) (rotate -45 WITCH))</code>
+or <code>(beside WITCH WITCH WITCH)</code></li>
+<li>(v1=D, v2=D). <code>(rotate-cw (above WITCH WITCH WITCH))</code> or
+<code>(beside (flip-horizontal WITCH) (flip-horizontal WITCH) (flip-horizontal WITCH))</code></li>
+<li>(v1=E, v2=E).
+<code>(beside (rotate-ccw WITCH) (rotate-ccw WITCH) (rotate-ccw WITCH))</code>
+or <code>(above WITCH (beside WITCH WITCH))</code></li>
+</ul></li>
+<li><p>(Image-7, v1=48, v2=48)
+<code>(rotate-cw (above WITCH WITCH WITCH))</code> Correct: v1=D;
+v2=D</p>
+<ul>
+<li>(v1=A, v2=A).
+<code>(above/align "left" WITCH (beside WITCH WITCH))</code> or
+<code>(flip-vertical (beside WITCH WITCH WITCH))</code></li>
+<li>(v1=B, v2=B). <code>(rotate -45 (beside WITCH WITCH WITCH))</code>
+or <code>(beside (above WITCH WITCH) WITCH)</code></li>
+<li>(v1=C, v2=C).
+<code>(above (rotate -45 WITCH) (rotate -45 WITCH) (rotate -45 WITCH))</code>
+or <code>(beside WITCH WITCH WITCH)</code></li>
+<li>(v1=D, v2=D). <code>(rotate-cw (above WITCH WITCH WITCH))</code> or
+<code>(beside (flip-horizontal WITCH) (flip-horizontal WITCH) (flip-horizontal WITCH))</code></li>
+<li>(v1=E, v2=E).
+<code>(beside (rotate-ccw WITCH) (rotate-ccw WITCH) (rotate-ccw WITCH))</code>
+or <code>(above WITCH (beside WITCH WITCH))</code></li>
+</ul></li>
+<li><p>(Image-8, v1=49, v2=49)
+<code>(beside (flip-horizontal WITCH) (flip-horizontal WITCH) (flip-horizontal WITCH))</code>
+Correct: v1=D; v2=D</p>
+<ul>
+<li>(v1=A, v2=A).
+<code>(above/align "left" WITCH (beside WITCH WITCH))</code> or
+<code>(flip-vertical (beside WITCH WITCH WITCH))</code></li>
+<li>(v1=B, v2=B). <code>(rotate -45 (beside WITCH WITCH WITCH))</code>
+or <code>(beside (above WITCH WITCH) WITCH)</code></li>
+<li>(v1=C, v2=C).
+<code>(above (rotate -45 WITCH) (rotate -45 WITCH) (rotate -45 WITCH))</code>
+or <code>(beside WITCH WITCH WITCH)</code></li>
+<li>(v1=D, v2=D). <code>(rotate-cw (above WITCH WITCH WITCH))</code> or
+<code>(beside (flip-horizontal WITCH) (flip-horizontal WITCH) (flip-horizontal WITCH))</code></li>
+<li>(v1=E, v2=E).
+<code>(beside (rotate-ccw WITCH) (rotate-ccw WITCH) (rotate-ccw WITCH))</code>
+or <code>(above WITCH (beside WITCH WITCH))</code></li>
+</ul></li>
+<li><p>(Image-9, v1=50, v2=50)
+<code>(beside (rotate-ccw WITCH) (rotate-ccw WITCH) (rotate-ccw WITCH))</code>
+Correct: v1=E; v2=E</p>
+<ul>
+<li>(v1=A, v2=A).
+<code>(above/align "left" WITCH (beside WITCH WITCH))</code> or
+<code>(flip-vertical (beside WITCH WITCH WITCH))</code></li>
+<li>(v1=B, v2=B). <code>(rotate -45 (beside WITCH WITCH WITCH))</code>
+or <code>(beside (above WITCH WITCH) WITCH)</code></li>
+<li>(v1=C, v2=C).
+<code>(above (rotate -45 WITCH) (rotate -45 WITCH) (rotate -45 WITCH))</code>
+or <code>(beside WITCH WITCH WITCH)</code></li>
+<li>(v1=D, v2=D). <code>(rotate-cw (above WITCH WITCH WITCH))</code> or
+<code>(beside (flip-horizontal WITCH) (flip-horizontal WITCH) (flip-horizontal WITCH))</code></li>
+<li>(v1=E, v2=E).
+<code>(beside (rotate-ccw WITCH) (rotate-ccw WITCH) (rotate-ccw WITCH))</code>
+or <code>(above WITCH (beside WITCH WITCH))</code></li>
+</ul></li>
+</ol>

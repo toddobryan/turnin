@@ -638,6 +638,8 @@ Which of the following is the correct way to translate [=2 + 3 · 4 - 5=] to Rac
 @
 (- (* 2 (+ 3 4)) 5)
 @
+(+ (- 2 (* 3 4)) 5)
+@
 A
 @@Image-1
 [=(flip-vertical (beside WITCH WITCH WITCH))=]

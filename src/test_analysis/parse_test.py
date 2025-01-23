@@ -5,54 +5,6 @@ from typing import List
 
 from . import resources
 
-ALPH = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-class Question:
-    def __init__(self, name: str, text: str, answers=None):
-        if answers is None:
-            answers = []
-        self.name: str = name
-        self.text: str = text
-        self.answers: [Answer] = answers
-
-    def __str__(self):
-        s = self.text + '\n'
-        for i, a in enumerate(self.answers):
-            s += f"  {ALPH[i + 1]}{a.correct_mark()} {str(a)}\n"
-        return s
-
-    def xml(self):
-        question = ET.Element("question")
-        question.set("name", self.name)
-        text_element = ET.Element("text")
-        text_element.text = self.text
-        question.append(text_element)
-        for a in self.answers:
-            question.append(a.xml())
-        return question
-
-class Answer:
-    def __init__(self, text, is_correct: bool = False):
-        self.text: str = text
-        self.is_correct: bool = is_correct
-
-    def __str__(self):
-        return self.text
-
-    def xml(self):
-        answer = ET.Element("answer")
-        answer.text = self.text
-        if self.is_correct:
-            answer.set("isCorrect", "true")
-        return answer
-
-    def correct_mark(self) -> str:
-        if self.is_correct:
-            return "*"
-        else:
-            return ""
-
-
 def read_test_ezml(input_file) -> ET.Element:
     with input_file.open("rt") as file:
         whole_file = file.read()
