@@ -1,3 +1,4 @@
+import glob
 import os
 from argparse import ArgumentParser
 import pandas as pd
@@ -51,7 +52,7 @@ def collect(
             student_assignment_collected = collected_folder / f"{assignment_name}-{datetime_tag()}{extension}"
             shutil.copy2(student_assignment, assignment_folder / period / f"{login}{extension}")
             shutil.move(student_assignment, student_assignment_collected)
-        else:
+        elif not glob.glob(os.path.join(collected_folder, f"{assignment_name}*")):
             if login not in missing:
                 missing[login] = []
             missing[login].append(assignment_name)
@@ -65,4 +66,6 @@ def collect(
 
 if __name__ == "__main__":
     args = collect_parser.parse_args()
-    collect(args.period, args.filename)
+    missing = collect(args.period, args.filename)
+    for login, assignments in missing.items():
+        print(f"{login}: {', '.join(assignments)}")
