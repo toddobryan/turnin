@@ -1,7 +1,7 @@
 import os
 from argparse import ArgumentParser
 from datetime import datetime
-from getpass import getpass
+import getpass
 from pathlib import Path
 
 def get_current_user():

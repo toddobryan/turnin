@@ -1,4 +1,4 @@
-from src.test_analysis.questions import VersionMapping
+from test_analysis import VersionMapping
 
 vm1 = VersionMapping.parse("13,E,D,B,C,A")
 vm2 = VersionMapping.parse("1,A,B,C,D,E")

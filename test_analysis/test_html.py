@@ -2,7 +2,6 @@ from pathlib import Path
 from typing import cast
 
 from .questions import Question, Answer, QuestionSet, VersionToQuestionToVersionMapping
-from .analyze import create_question_correlation
 from . import resources
 
 from importlib import resources as impres
@@ -126,7 +125,8 @@ def print_score_and_wrong_answers(qset: QuestionSet):
 
 def main():
     question_dump = cast(Path, impres.files(resources) / "apcsp-final.md")
-    question_corr = cast(Path, impres.files(resources) / "question_correlation.csv")
+    question_corr = cast(Path, impres.files(
+        resources) / "question_correlation.csv")
     qs = QuestionSet.parse(question_dump, question_corr, 2)
     print_score_and_wrong_answers(qs)
 

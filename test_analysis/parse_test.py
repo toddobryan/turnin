@@ -1,7 +1,6 @@
 import lxml.etree as ET
 
 import importlib.resources as impres
-from typing import List
 
 from . import resources
 

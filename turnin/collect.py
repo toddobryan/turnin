@@ -72,6 +72,8 @@ def collect(
 
     return missing
 
+
+
 if __name__ == "__main__":
     missing = {}
     if len(sys.argv) == 3:
